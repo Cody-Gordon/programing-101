@@ -1,0 +1,30 @@
+body{
+    background-color: cyan;
+    color: darkgoldenrod;
+ }
+ nav{
+    padding: 5px;
+    line-height:30px
+ }
+
+
+ footer{
+    position: fixed;
+    bottom: 2;
+    text-align: center;
+ }
+
+
+
+ header{
+    text-align: center;
+
+ }
+
+ img{
+    width:200px;
+    height:200px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+ }
