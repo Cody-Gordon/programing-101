@@ -45,4 +45,29 @@
               
             }
             rollDice()
-        
+            function validateForm(){
+           
+                let FirstName = document.getElementById("txtFirstName").value.trim();
+                console.log("Firstname"+FirstName);
+                let LastName = document.getElementById("txtLastName").value.trim();
+                console.log("Last name"+LastName);
+                let ZipCode = document.getElementById("txtzip").value.trim();
+                console.log("Zipcode"+ZipCode);
+            
+            //validation we need to make sure that the first name + " "+ last name is less than 20 characters
+            //zip code needs to be exactly 5 digits
+            //variable to store message that we will display to user
+            //concacinate first and last name with a space between
+            let FullName = FirstName +" " + LastName
+            if(FullName.length>20||FullName.length==1){
+                //an invalide name was entered
+                message = "invalid name, please try again"
+                console.log("invalid name")
+            }
+                else if (ZipCode.length != 5){
+                    message="invalid zip code, try again"
+                }
+            
+            let message="welcome "+ FirstName+ " the secret message was hi"
+            document.getElementById("divMessage").textContent=message;
+        }
