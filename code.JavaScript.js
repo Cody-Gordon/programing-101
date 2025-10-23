@@ -1,6 +1,7 @@
  // functions are a nice way to organize our code and make it reasuable
         // use a descritive name for functions-they do something thus make it a verbaction
         // () can hold function argument - if i need to pass in information to the function.
+        //for the dice game
         function playdice(){
 
             console.log("playdice() function was called") 
@@ -53,6 +54,7 @@
                 console.log("Last name"+LastName);
                 let ZipCode = document.getElementById("txtzip").value.trim();
                 console.log("Zipcode"+ZipCode);
+                //for the user choice assignment
             
             //validation we need to make sure that the first name + " "+ last name is less than 20 characters
             //zip code needs to be exactly 5 digits
@@ -71,3 +73,36 @@
             let message="welcome "+ FirstName+ " the secret message was hi"
             document.getElementById("divMessage").textContent=message;
         }
+        //for index image movement
+        let yCord=randint()
+        // keep track of the interval the image will move
+        let intervalID =0;
+    //this function will start the movement of a given image around the screen
+    function startMove(){
+      //create a shortcut (nickname) to the image in te HTML
+      let image = document.getElementById("memeImage");
+      
+      intervalID = setInterval(function(){
+        xCord=randint();
+        yCord=randint();
+        //change coordinate x
+      image.style.left = xCord + "px";
+      //change coordinate y
+      image.style.top = yCord + "px";
+       console.log("did image move, was it random in both directions")
+      },1000)//this will make the code run every second
+     document.getElementById("btnstart").disabled = true;
+     document.getElementById("btnstop").disabled=false;
+      //function to get a random number
+     
+    }
+    function stopMove(){
+      //clears the interval preventing the code from running over and over again
+      clearInterval(intervalID);
+      document.getElementById("btnstart").disabled = false;
+     document.getElementById("btnstop").disabled=true;
+    }
+    function randint(){
+      return Math.floor(Math.random()*800);
+    
+    }
