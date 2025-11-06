@@ -106,3 +106,37 @@
       return Math.floor(Math.random()*800);
     
     }
+    // palindrome tester
+    function testPalin(){
+ 
+        // grab user input
+        let string = document.getElementById("txtInput").value.trim();
+        console.log("userInput"+ string)
+        
+        if (isPalindrome(string)){
+            document.getElementById("divResult").textContent="yes, " +
+            string + " is a palindrome."
+        
+        }
+        else{
+            document.getElementById("divResult").textContent="No, " +
+            string + " is not a palindrome"
+        }
+        
+        
+        }
+        function isPalindrome(wordToTest){
+            // checks word for spaces and removes them? No Freaking clue how that end command works but it does.......................................................................................
+            let cleanedWord = wordToTest.replace(/\s/g, "");
+            cleanedWord=cleanedWord.toLowerCase();
+        // convert cleaned string to array
+        let arrUsrString = cleanedWord.split("");
+        //reverse array content
+        arrUsrString=arrUsrString.reverse();
+        //take our reversed array and convert back to string
+        let reversedWord=arrUsrString.join("")
+        console.log("test "+ reversedWord)
+        
+        return cleanedWord == reversedWord;
+        
+        }
