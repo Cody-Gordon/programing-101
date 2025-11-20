@@ -140,3 +140,26 @@
         return cleanedWord == reversedWord;
         
         }
+        // audio assignment
+        function addAudio(){
+            let audioElem = document.createElement("audio");
+            audioElem.setAttribute("id", "myAudio");
+            audioElem.setAttribute("src","us-lab-background.mp3")
+            // make sure to use your sound file name here you can use the us-lab-background mp3 for testing- make sure the sound file is in the same folder as your html/js files
+         // this adds the control dashboard to show that the audio file is working
+            audioElem.setAttribute("controls","controls")
+        document.getElementById("divAudio").appendChild(audioElem);
+        //hide the add audio button
+        document.getElementById("btnAddAudio").hidden=true
+        document.getElementById("btnPlayAudio").hidden=false
+        document.getElementById("btnStopAudio").hidden=false
+        
+        }
+        function PlayAudio(){
+            let audio = document.getElementById("myAudio")
+            audio.play();
+        }
+        function stopAudio(){
+            let audio = document.getElementById("myAudio")
+            audio.pause();
+        }
