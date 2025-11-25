@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- programmed by cody gordon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array shenanigans</title>
+</head>
+<link rel= "stylesheet" href="Main.css">
+<script src = "code.JavaScript.js"></script>
+<h1> program test.html</h1>
+
+<body>
+<main>
+   <!-- sets up the label for the first name -->
+    <label for="txtFirstName" id = "lblfirstname">First Name:</label>
+    <!-- sets up the input box for firstname -->
+    <Input type="text" name="txtFirstName" id ="txtFirstName" placeholder="Jane">
+        <!-- sets up a break so everything is on seperate lines -->
+        <br>
+        <!-- sets up the label for persons lastname -->
+    <label for="txtLastName" id = "lblLastName">Last name:</label>
+    <!-- sets up the textbox for the last name -->
+    <Input type="text" name="txtLastName" id = "txtLastName" placeholder="Doe">
+        <br>
+        <!-- sets up the label for zipcode -->
+    <label for="txtzip"id ="lblzip">zip code:</label>
+    <!-- sets up the input box for zipcode -->
+    <Input type="text" name="txtzip" id= "txtzip" placeholder="12345">
+        <!-- runs a function on click that tweaks the inputed information and confirms if it is valid -->
+        <button onclick="validateForm();" id ="btnvalidate">ValidateForm</button>
+        <script>
+            // this function removes the previously added boxes and labels, to reduce lag over just hiding them
+        function hideInput(){
+        document.getElementById("txtFirstName").remove()
+        document.getElementById("txtLastName").remove()
+        document.getElementById("txtzip").remove()
+        document.getElementById("btnvalidate").remove()
+        document.getElementById("lblfirstname").remove()
+        document.getElementById("lblLastName").remove()
+        document.getElementById("lblzip").remove()
+        }
+    </script>
+      
+
+</main>
+</body>
+</html>
