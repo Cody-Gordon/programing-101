@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handling basics</title>
+</head>
+<body>
+    <main>
+        <h1 id="heading1"> event handling basics</h1>
+        <button id="btnClickMe" onclick="ChangeText()">Click Me!</button>
+    </main>
+
+    <!-- <todo move this Javascript code to an external file when done then delete this comment -->
+    
+<script>
+    
+//  some text will change once button is clicked
+    function ChangeText(){
+        /* function name ChangeText
+        parameters none
+
+        description: some text will change when button is clicked
+        */
+    document.getElementById("heading1").textContent="Event Handled"
+    }
+     //when youw ant code to run repeatedly at a set period of time you can use setInterval
+
+       //set interval uses two argements, the first argument is the code to run and the second argument is the rate it should be run
+       //setInterval(/*code to run*/,/*how often it should run in ms*/)
+       //use function(){} to set an anonymous function- this function exists here and here alone
+       setInterval(function(){
+       console.log("test")
+    },1000)
+</script>
+</body>
+</html>
